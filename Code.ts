@@ -22,10 +22,15 @@ function addSubscriber() {
   
 }
 
-function serialize() {
-  
-  
-}
+function serialize(sheet, data: [][], append: boolean = true) {
+  SpreadsheetApp.setActiveSheet(sheet);
+  if (append) {
+    var end = sheet.getDataRange().height;
+    var range = sheet.getRange(end,1, data.length, data[0].length)
+     } else {
+    sheet.getRange(1,1, data.length, data[0].length)
+  }
+} 
 
 function fetchData(category: string, query: string, uriComponents: string[]) {
   var url: string = "https://firepit.campstrategic.com/api8/" +  category + '/' + query;
@@ -39,3 +44,4 @@ function fetchData(category: string, query: string, uriComponents: string[]) {
   
   return JSON.parse(UrlFetchApp.fetch(url, requestData).getContentText());
 }
+

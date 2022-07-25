@@ -1,0 +1,117 @@
+/*
+Preliminary Structure for data
+*/
+//Deltas are Month to Month
+Health {
+    Total Housefile Count: Number,
+    Housefile Delta: Number,
+    Active Subscriber Count: Number,
+    Active Sub Delta: Number,
+    Prospecting Expenses: Currency,
+    Sends This Month: Number,
+    R/S This Month: Number,
+    Texts This Month: Number,
+    Ads This Month: Number,
+    Raised This Month: Currency,
+    Raised Delta: Currency,
+    Leads This Month: Number,
+    YTD Chart
+}
+
+Housefile Send {
+    Subject Line: String,
+    Campaign: String,
+    Send Date: Date,
+    Send Time: Time,
+    Split: Percentage,
+    Sent: Number,
+    Delivered: Number,
+    Delivery Rate: Percentage,
+    Bounce Rate: Percentage,
+    U-Open Rate: Percentage,
+    U-Click Rate:  Percentage
+    Lists: CSV String,
+    Sender Name: String,
+    Gross Raised: Currency,
+    Raised/Deliv: Currency,
+    Raised/Open: Currency,
+    Net Raised: Currency,
+    Ave Don: Currency,
+    Donors: Number,
+    U-Opens: Number,
+    U-Clicks: Number,
+    Undeliv: Number,
+    Undeliv Rate: Percentage,
+    Unsub: Number,
+    Unsub Rate: Percentage,
+    Complaints: Number,
+    Complaint Rate: Percentage,
+    Notes: String,
+}
+
+Rev/Share Send {
+    Partner: String,
+    Campaign: String,
+    Send Date: Date,
+    Split: Number,
+    List: String,
+    Gross Raised: Currency,
+    Net Raised: Currency,
+    Ave Donation: Currency,
+    Donors: Number,
+    New Leads: Number,
+    Notes: String,
+}
+
+Text { 
+    Date: Date,
+    Campaign: String,
+    List: String,
+    Gross Raised: Currency,
+    Net Raised: Currency,
+    Ave Donation: Currency,
+    Donors: Number,
+    New Leads: Number,
+    Notes: String,
+}
+
+Ad {
+    Date: Date,
+    Campaign: String,
+    Placement: String,
+    Gross Raised: Currency,
+    Net Raised: Currency,
+    Donors: Number,
+    New Leads: Number,
+    Notes: String,
+}
+
+Donor {
+    Email Address: String,
+    First Name: String,
+    Last Name: String,
+    State: String,
+    New Lead: Boolean,
+    Origin: String,
+    Total to date: Currency,
+    Largest Donation: Currency,
+    Topics: CSV String,
+}
+
+Topic {
+    Jobs: Number,
+    Raised: Currency,
+    Raised/Deliver: Currency,
+    Donors: Number,
+    Donors/Deliver: Number,
+    Avg Open Rate: Percentage,
+}
+
+List {
+    Subscribers: Number,
+    Donors: Number,
+    Avg Open Rate: Percentage,
+    Giving Rate: Percentage,
+    Tested Topics: CSV List,
+    Favorite Topics: CSV List,
+}
