@@ -2,8 +2,21 @@ function init() {
   Logger.log("Hello World!")
 }
 
-function winred() {
-  
+function winred(e) {
+  var report = SpreadsheetApp.getActiveSpreadsheet(); 
+  var sheet = report.getSheetByName("Donors");
+  var donors = sheet.getDataRange().getValues();
+  var newDonor = true;
+  for (var i = 0; i < donors.length; i++) {
+    if (donors[i][0] == e.Email) {
+      Logger.log("Original Entry: "+donors[i]);
+      newDonor = false; 
+      donors[i][3] += e.Amount;
+      Logger.log("New Entry: "+donors[i])
+    }
+  }
+  sheet.getActiveRange()
+
 }
 
 function getEmail() {
@@ -23,13 +36,14 @@ function addSubscriber() {
 }
 
 function serialize(sheet, data: [][], append: boolean = true) {
-  SpreadsheetApp.setActiveSheet(sheet);
   if (append) {
     var end = sheet.getDataRange().height;
     var range = sheet.getRange(end,1, data.length, data[0].length)
-     } else {
+  } else {
     sheet.getRange(1,1, data.length, data[0].length)
   }
+
+  range.setValues(data);
 } 
 
 function fetchData(category: string, query: string, uriComponents: string[]) {

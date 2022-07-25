@@ -7,3 +7,4 @@ Todo:
 - [ ] Perform user defined get requests
 - [ ] Save spreadsheet resources by doing calculations in code
 - [ ] Replace all existing sheet logic with this new library
+- [ ] Restructure sheets around objects
