@@ -11,30 +11,33 @@ Todo:
 
 # Tabs
 The number of tabs needed for use can be greatly reduced by moving logic and infrastructure into code.
-Here are the tabs I can think of for use: 
+There are two different data paradigms I want to use:
 
-## Example Email
+## Data by Object
+
+### Example Email
 |Email Name                   | Subject Line     | Campaign         | Send Date | Delivered    | Opens         |  Lists           | Sender Name      | Gross Raised   | Net Raised | Donors | Clicks | Notes|
-
-## Example Rev/Share
+|--|--|--|--|--|--|--|--|--|--|--|--|--|
+### Example Rev/Share
 |Email Name                   | Partner          | Campaign         | Send Date | List         | Gross Raised  | Net Raised       | Donors           | New Leads      | Notes      |
-
-## Example Text 
+|--|--|--|--|--|--|--|--|--|--|
+### Example Text 
 |Text Name                    | Campaign         | Send Date        | List      | Gross Raised | Net Raised    | Donors           | New Leads        | Notes          |
-
-## Example Ad
+|--|--|--|--|--|--|--|--|--|
+### Example Ad
 |Ad Name                      | Campaign         | Placement Period | Agency    | Gross Raised | Net Raised    | Donors           | New Leads        | Notes          |
-
-## Donor List
+|--|--|--|--|--|--|--|--|--|
+### Donor List
 |Email Address                | First Name       | Last Name        | State     | Origin       | Total to date | Largest Donation | Date Last Active | Donation Topics|
-
-## Topic List 
+|--|--|--|--|--|--|--|--|--|
+### Topic List 
 |Emails                       | Ads              | Texts            | Raised    | Donors       | Avg Open Rate |
+|--|--|--|--|--|
 
-## List Evaluations 
+### List Evaluations 
 Here we can evaluate the performance of lists and generate new ones based on donor behavior and campaign metrics
 
-## Front Page 
+### Front Page 
 Metrics for rolling 30 or 7 (TBD) day window.
 |Client Name                  | Dates for window |
 |----                         |----              |
@@ -48,3 +51,9 @@ Metrics for rolling 30 or 7 (TBD) day window.
 | Raised This Period          | Number           |
 | Rate of Change              | Rate             | 
 | Leads This Period           | Number           |  
+
+## Data by Date
+
+### Daily Summary
+| Sends | Gross Raised | Net Raised | Donors | New Leads |
+|--|--|--|--|--|
