@@ -6,7 +6,9 @@ function winred(e) {
   var report = SpreadsheetApp.getActiveSpreadsheet(); 
   var sheet = report.getSheetByName("Donors");
   var donors = sheet.getDataRange().getValues();
+
   var newDonor = true;
+  
   for (var i = 0; i < donors.length; i++) {
     if (donors[i][0] == e.Email) {
       Logger.log("Original Entry: "+donors[i]);
@@ -15,8 +17,19 @@ function winred(e) {
       Logger.log("New Entry: "+donors[i])
     }
   }
-  sheet.getActiveRange()
+  
+  sheet = report.getSheetByName("Emails");
+  if (e.)
+  var jobs = sheet.getDataRange().getValues();
 
+  for (var i = 0; i < jobs.length; i++) {
+    if (donors[i][0] == e.Email) {
+      Logger.log("Original Entry: "+donors[i]);
+      newDonor = false; 
+      donors[i][3] += e.Amount;
+      Logger.log("New Entry: "+donors[i])
+    }
+    
 }
 
 function getEmail() {
